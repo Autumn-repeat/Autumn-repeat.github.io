@@ -16,7 +16,7 @@
 <meta property="og:description" content="为了避免重复输入密码来进行远程登录，让我们通过本地秘钥来解决这个问题吧！">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-04T06:35:09.000Z">
-<meta property="article:modified_time" content="2021-12-04T06:52:39.634Z">
+<meta property="article:modified_time" content="2021-12-04T07:11:17.667Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -206,7 +206,13 @@
 </li>
 <li><p>后续clone的时候选择SSH链接即可。</p>
 </li>
+<li><p> SSH key passphrases的问题</p>
+</li>
 </ol>
+<p>   我们可以保护我们的SSH密钥并配置一个身份验证代理，这样我们就不必每次使用SSH密钥时都重新输入密码。(官方原话，不过毕竟麻烦，如果不小心像我一样在前面设置SSH中加了passphrases，通过如下方式取消</p>
+<p>   )</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mce_autumn@bogon ~ % ssh-keygen -p</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> the key is (/Users/mce_autumn/.ssh/id_rsa): </span><br><span class="line">Enter old passphrase: </span><br><span class="line">Key has comment <span class="string">&#x27;zzq370381990@163.com&#x27;</span></span><br><span class="line">Enter new passphrase (empty <span class="keyword">for</span> no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved with the new passphrase.</span><br></pre></td></tr></table></figure>
+
 
       
 

@@ -16,7 +16,7 @@
 <meta property="og:description" content="创建一个Github仓库，开始我们对信息的迭代与维护吧！">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-04T06:06:47.000Z">
-<meta property="article:modified_time" content="2021-12-04T08:49:29.418Z">
+<meta property="article:modified_time" content="2021-12-04T09:25:25.747Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -184,27 +184,21 @@
         <p>创建一个Github仓库，开始我们对信息的迭代与维护吧！</p>
 <span id="more"></span>
 
-<h1 id="chapter-01-安装"><a href="#chapter-01-安装" class="headerlink" title="chapter 01 安装"></a>chapter 01 安装</h1><h2 id="1-1-安装git"><a href="#1-1-安装git" class="headerlink" title="1.1 安装git"></a>1.1 安装git</h2><ol>
-<li><p>CenOS</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">suddo yum install git-all</span><br><span class="line">git --verison</span><br></pre></td></tr></table></figure></li>
-<li><p>Ubuntu</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure></li>
-<li><p>Windows</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git-scm.com/downloads</span><br></pre></td></tr></table></figure></li>
-<li><p>MAC OS</p>
+<h1 id="chapter-01-安装"><a href="#chapter-01-安装" class="headerlink" title="chapter 01 安装"></a>chapter 01 安装</h1><h2 id="1-1-安装git"><a href="#1-1-安装git" class="headerlink" title="1.1 安装git"></a>1.1 安装git</h2><p>CenOS</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">suddo yum install git-all</span><br><span class="line">git --verison</span><br></pre></td></tr></table></figure>
+
+<p>Ubuntu</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+
+<p>Windows</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git-scm.com/downloads</span><br></pre></td></tr></table></figure>
+
+<p>MAC OS</p>
+<h2 id="1-2-生成SSH密钥"><a href="#1-2-生成SSH密钥" class="headerlink" title="1.2 生成SSH密钥"></a>1.2 生成SSH密钥</h2><p>看看另一个博客《SSH-密钥说明》)</p>
+<h2 id="1-3-建立一个Github仓库"><a href="#1-3-建立一个Github仓库" class="headerlink" title="1.3 建立一个Github仓库"></a>1.3 建立一个Github仓库</h2><p>登录github，点击头像左边的“+”号，再点击new reposity</p>
+<h2 id="1-4-配置仓库"><a href="#1-4-配置仓库" class="headerlink" title="1.4 配置仓库"></a>1.4 配置仓库</h2><ol>
+<li><p>进入需要版本控制的目录</p>
 </li>
-</ol>
-<h2 id="1-2-生成SSH密钥"><a href="#1-2-生成SSH密钥" class="headerlink" title="1.2 生成SSH密钥"></a>1.2 生成SSH密钥</h2><ol>
-<li><p>第一步生成密钥</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;XXXX@XXX.com&quot;</span><br></pre></td></tr></table></figure></li>
-<li><p>第二第三步输入密码</p>
-</li>
-<li><p>秘钥生成后，进入密钥目录(后续操作看看另一个博客《SSH-密钥说明》)</p>
-</li>
-</ol>
-<h2 id="1-3-建立一个Github仓库"><a href="#1-3-建立一个Github仓库" class="headerlink" title="1.3 建立一个Github仓库"></a>1.3 建立一个Github仓库</h2><p>登录github，点击头像左边的“+”号，添加一个new reposity</p>
-<h2 id="1-4-配置仓库"><a href="#1-4-配置仓库" class="headerlink" title="1.4 配置仓库"></a>1.4 配置仓库</h2><p>进入需要版本控制的目录</p>
-<ol>
 <li><p>初始化：在此目录下，生成一个.git隐藏文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></li>
 <li><p>添加需要版本跟踪的文件</p>
@@ -230,15 +224,19 @@
 <li><p>解决错误，就回到第七步</p>
 </li>
 </ol>
-<p>其他问题：</p>
+<p><strong>其他问题：</strong></p>
 <ol>
 <li><p>地址修改</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin https://xxx@xxx/B.git</span><br></pre></td></tr></table></figure></li>
 <li><p>更新仓库（进入目录）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git statis</span><br><span class="line">git add -A</span><br><span class="line">git commit -a -m &quot;uodate&quot;</span><br><span class="line">git push origin master -f</span><br></pre></td></tr></table></figure>
-
-<p>第四条命令中的’master’ 可能需要换成‘main’</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git statis</span><br><span class="line">git add -A</span><br><span class="line">git commit -a -m &quot;uodate&quot;</span><br><span class="line">git push origin master -f</span><br></pre></td></tr></table></figure></li>
+<li><p>第四条命令中的’master’ 可能需要换成‘main’</p>
 </li>
+</ol>
+<ol>
+<li>是一个</li>
+<li>不是一个</li>
+<li></li>
 </ol>
 
       
@@ -450,6 +448,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">life for you</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
             
             <div class="clearfix"></div>

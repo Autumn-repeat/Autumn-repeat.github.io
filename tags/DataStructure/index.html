@@ -6,20 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Apache HttpComponents简介 | Hexo</title>
+  <title>Tag: DataStructure | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开始学习WebMagic，遇到的第一个中间件？来让我们简单的了解下吧">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Apache HttpComponents简介">
-<meta property="og:url" content="http://example.com/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/tags/DataStructure/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="开始学习WebMagic，遇到的第一个中间件？来让我们简单的了解下吧">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-11T07:18:48.000Z">
-<meta property="article:modified_time" content="2021-12-11T09:26:23.898Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Internet">
-<meta property="article:tag" content="Apache">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -163,179 +157,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Apache-HttpComponents简介" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Apache HttpComponents简介
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/12/11/Redis%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+  	<time datetime="2021-12-11T08:54:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-11</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/12/11/Redis%E7%AE%80%E4%BB%8B/">Redis简介</a>
     </h1>
   
 
-        
-        <a href="/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/" class="archive-article-date">
-  	<time datetime="2021-12-11T07:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开始学习WebMagic，遇到的第一个中间件？来让我们简单的了解下吧</p>
-<span id="more"></span>
-
-<h3 id="1-Apache-Software-Foundation简介"><a href="#1-Apache-Software-Foundation简介" class="headerlink" title="1. Apache Software Foundation简介"></a>1. Apache Software Foundation简介</h3><p> Apache软件基金会是全球最大的开源软件基金会，其开源软件支撑了全球万亿计的软件，服务于全球的各行各业。有软件的地方，就会有Apache开源软件的身影。</p>
-<h3 id="2-Apache-HttpComponents"><a href="#2-Apache-HttpComponents" class="headerlink" title="2. Apache HttpComponents"></a>2. Apache HttpComponents</h3><p>Apache HttpComponents项目负责创建和维护一个专注于HTTP和相关协议的基础Java组件的工具集。</p>
-<h3 id="3-HttpComponents-Overview"><a href="#3-HttpComponents-Overview" class="headerlink" title="3. HttpComponents Overview"></a>3. HttpComponents Overview</h3><ul>
-<li>超文本传输协议(HTTP)可能是当今互联网上使用的最重要的协议。Web服务、支持网络的设备和网络计算的增长继续将HTTP协议的作用扩展到用户驱动的Web浏览器之外，同时增加了需要HTTP支持的应用程序的数量。</li>
-<li>HttpComponents为扩展设计,同时提供强劲的支持HTTP协议，对此可能感兴趣的人可用于构建HTTP-aware客户机和服务器应用程序，比如web浏览器、<strong>web spider</strong>、 HTTP代理，利用web服务传输库，或为系统分布式通信或扩展HTTP协议。</li>
-</ul>
-<h3 id="4-HttpComponents-Structure"><a href="#4-HttpComponents-Structure" class="headerlink" title="4. HttpComponents Structure"></a>4. HttpComponents Structure</h3><ol>
-<li><p><strong>HttpComponents Core</strong></p>
-<p>HttpCore是一组低级HTTP传输组件，可用于构建占用最少空间的自定义客户端和服务器端HTTP服务。HttpCore支持两种I/O模型:基于经典Java I/O的阻塞I/O模型和基于Java NIO的非阻塞事件驱动I/O模型。</p>
-</li>
-<li><p><strong>HttpComponents Client</strong></p>
-<p>HttpClient是一个兼容HTTP/1.1的基于HttpCore的HTTP代理实现。它还提供了用于客户端身份验证、HTTP状态管理和HTTP连接管理的可重用组件。HttpComponents Client是Commons HttpClient 3.x的继承者和替代品。<strong>强烈鼓励Commons HttpClient的用户升级。</strong></p>
-</li>
-<li><p><strong>Commons HttpClient (legacy)</strong></p>
-<p>Commons HttpClient 3.x代码线已经到了生命的尽头。Commons HttpClient 3.x的所有用户。强烈建议升级到HttpClient 4.1。</p>
-</li>
-</ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://hc.apache.org/index.html">https://hc.apache.org/index.html</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Internet</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Memory</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Apache</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DataStructure</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/12/11/jsoup%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jsoup简介
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/12/11/%E4%B8%BA%E4%BB%80%E4%B9%88Java%E6%98%AF%E5%BC%BA%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">为什么Java是强类型语言</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -358,9 +237,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -16,8 +16,9 @@
 <meta property="og:description" content="从网页获取了HTML响应后，如何处理呢？">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-11T07:47:09.000Z">
-<meta property="article:modified_time" content="2021-12-11T08:53:39.727Z">
+<meta property="article:modified_time" content="2021-12-11T09:10:01.785Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Internet HTML">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -64,7 +65,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 11
+    		总文章数 12
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -198,6 +199,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Document doc = Jsoup.connect(<span class="string">&quot;https://en.wikipedia.org/&quot;</span>).get();</span><br><span class="line">log(doc.title());</span><br><span class="line">Elements newsHeadlines = doc.select(<span class="string">&quot;#mp-itn b a&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (Element headline : newsHeadlines) &#123;</span><br><span class="line">  log(<span class="string">&quot;%s\n\t%s&quot;</span>, </span><br><span class="line">    headline.attr(<span class="string">&quot;title&quot;</span>), headline.absUrl(<span class="string">&quot;href&quot;</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-Open-Source"><a href="#3-Open-Source" class="headerlink" title="3. Open Source"></a>3. Open Source</h3><p>jsoup是一个开放源码项目，它使用自由的MIT许可证发行。源代码可以在GitHub上找到。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://jsoup.org/">https://jsoup.org/</a></p>
 
       
 
@@ -206,6 +208,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Internet HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -269,6 +282,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/12/11/Redis%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Redis简介
+        
+      </div>
+    </a>
   
   
     <a href="/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
@@ -398,11 +420,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">life for you</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+                <a href="javascript:void(0)" class="js-tag color1">Internet Apache</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,11 +428,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Internet Apache</a>
+                <a href="javascript:void(0)" class="js-tag color4">JDK</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JDK</a>
+                <a href="javascript:void(0)" class="js-tag color3">life for you</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Memory DataStructure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Internet HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
               <li class="article-tag-list-item">

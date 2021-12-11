@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>为什么Java是强类型语言 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在看《Head First Java》时，提到Java是个强类型的语言，代表不能容许变量保存类型的数据…Why？">
+  <meta name="description" content="在看《Head First Java》时，提到Java是个强类型的语言，代表不能容许变量保存类型的数据…Why？ A：类型擦除？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为什么Java是强类型语言">
 <meta property="og:url" content="http://example.com/2021/12/11/%E4%B8%BA%E4%BB%80%E4%B9%88Java%E6%98%AF%E5%BC%BA%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="在看《Head First Java》时，提到Java是个强类型的语言，代表不能容许变量保存类型的数据…Why？">
+<meta property="og:description" content="在看《Head First Java》时，提到Java是个强类型的语言，代表不能容许变量保存类型的数据…Why？ A：类型擦除？">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-11T05:21:02.000Z">
-<meta property="article:modified_time" content="2021-12-11T05:35:56.731Z">
+<meta property="article:modified_time" content="2021-12-11T05:57:30.047Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -65,7 +65,7 @@
 			</ul>
 		</nav>
 		<nav>
-    		总文章数 9
+    		总文章数 10
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -183,6 +183,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在看《Head First Java》时，提到Java是个强类型的语言，代表不能容许变量保存类型的数据…Why？</p>
+<p>A：类型擦除？</p>
 <span id="more"></span>
 
 <h3 id="1-基础概念："><a href="#1-基础概念：" class="headerlink" title="1. 基础概念："></a>1. 基础概念：</h3><h4 id="Program-Errors"><a href="#Program-Errors" class="headerlink" title="Program Errors"></a>Program Errors</h4><ul>
@@ -212,6 +213,9 @@
 <h3 id="4-例子"><a href="#4-例子" class="headerlink" title="4. 例子"></a>4. 例子</h3><p>无类型： 汇编<br>弱类型、静态类型 ： C/C++<br>弱类型、动态类型检查： Perl/PHP<br>强类型、静态类型检查 ：Java/C#<br>强类型、动态类型检查 ：Python, Scheme<br>静态 <strong>显式</strong>类型 ：Java/C<br>静态隐式类型 ：Ocaml, Haskell </p>
 <h3 id="5-其他解释"><a href="#5-其他解释" class="headerlink" title="5. 其他解释"></a>5. 其他解释</h3><p>强弱是说互相转化的能力，Java的类型几乎不能相互转换，所以很强。</p>
 <p>强类型就是強制你一定要有个类型，还要看他们之间互相转换的难易度。弱类型反之。。。</p>
+<h3 id="6-结论"><a href="#6-结论" class="headerlink" title="6. 结论"></a>6. 结论</h3><p>与Java中的伪“泛型”相关，运行时的类型会被擦除。</p>
+<p>向对象发送消息时，被调用的确切类型的方法直到运行时才会被确定。</p>
+<p>编译器确保被调用方法的存在，并对调用参数和返回值执行<strong>类型检查</strong>，但是并不知道将被执行的确切代码。（无法提供此类保证的语言被称为弱类型的）</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq457163027/article/details/51105148?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.highlightwordscore&amp;spm=1001.2101.3001.4242.1">https://blog.csdn.net/qq457163027/article/details/51105148?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.highlightwordscore&amp;spm=1001.2101.3001.4242.1</a></p>
 
       
@@ -295,6 +299,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Apache HttpComponents简介
+        
+      </div>
+    </a>
   
   
     <a href="/2021/12/07/ls%E4%B8%8E%E9%80%9A%E9%85%8D%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
@@ -424,6 +437,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Internet Apache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JDK</a>
               </li>
              
@@ -436,11 +453,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>SSH 密钥说明 | Hexo</title>
+  <title>jsoup简介 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为了避免重复输入密码来进行远程登录，让我们通过本地秘钥来解决这个问题吧！">
+  <meta name="description" content="从网页获取了HTML响应后，如何处理呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSH 密钥说明">
-<meta property="og:url" content="http://example.com/2021/12/04/SSH-%E5%AF%86%E9%92%A5%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:title" content="jsoup简介">
+<meta property="og:url" content="http://example.com/2021/12/11/jsoup%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="为了避免重复输入密码来进行远程登录，让我们通过本地秘钥来解决这个问题吧！">
+<meta property="og:description" content="从网页获取了HTML响应后，如何处理呢？">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-04T06:35:09.000Z">
-<meta property="article:modified_time" content="2021-12-04T09:37:54.472Z">
+<meta property="article:published_time" content="2021-12-11T07:47:09.000Z">
+<meta property="article:modified_time" content="2021-12-11T08:53:39.727Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -162,54 +161,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SSH-密钥说明" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jsoup简介" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SSH 密钥说明
+      jsoup简介
     </h1>
   
 
         
-        <a href="/2021/12/04/SSH-%E5%AF%86%E9%92%A5%E8%AF%B4%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2021-12-04T06:35:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-04</time>
+        <a href="/2021/12/11/jsoup%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+  	<time datetime="2021-12-11T07:47:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>为了避免重复输入密码来进行远程登录，让我们通过本地秘钥来解决这个问题吧！</p>
+        <p>从网页获取了HTML响应后，如何处理呢？</p>
 <span id="more"></span>
 
-<h1 id="chapter-01-SSH概述"><a href="#chapter-01-SSH概述" class="headerlink" title="chapter 01 SSH概述"></a>chapter 01 SSH概述</h1><p>SSH- secure shell,是一个建立在应用层上的安全协议,git基于这种安全协议，用户配置完SSH KEY后，可以在提交代码的时候不需要每次都输入用户名和密码</p>
-<h1 id="chapter-02-如何配置"><a href="#chapter-02-如何配置" class="headerlink" title="chapter 02 如何配置"></a>chapter 02 如何配置</h1><p><strong>第一部分：本地创建SSH</strong></p>
-<p>检查本地是否已经配置了SSH KEY</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="1-jsoup：Java-HTML-Parser"><a href="#1-jsoup：Java-HTML-Parser" class="headerlink" title="1. jsoup：Java HTML Parser"></a>1. jsoup：Java HTML Parser</h3><p>jsoup是一个用于处理真实（real-world）HTML的Java库。它提供了一个非常方便的API来获取url，提取和操作数据，使用HTML5的<strong>DOM方法</strong>和<strong>CSS选择器</strong>。</p>
+<p>jsoup实现了WHATWG HTML5规范，并将HTML解析为与现代浏览器相同的DOM。</p>
+<ul>
+<li>从URL、文件或字符串中抓取和解析HTML</li>
+<li>使用DOM遍历或CSS选择器查找和提取数据</li>
+<li>操作HTML元素、属性和文本</li>
+<li>根据安全列表清除用户提交的内容，以防止XSS攻击</li>
+<li>输出HTML整洁</li>
+</ul>
+<p>jsoup被设计用来处理在野外发现的所有种类的HTML；从原始和验证，到无效的标签汤；Jsoup将创建一个合理的解析树。</p>
+<h3 id="2-Example"><a href="#2-Example" class="headerlink" title="2. Example"></a>2. Example</h3><p>获取维基百科主页，将其解析为DOM，并从In the news部分选择标题到元素列表中(在线示例，完整源代码):</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Document doc = Jsoup.connect(<span class="string">&quot;https://en.wikipedia.org/&quot;</span>).get();</span><br><span class="line">log(doc.title());</span><br><span class="line">Elements newsHeadlines = doc.select(<span class="string">&quot;#mp-itn b a&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (Element headline : newsHeadlines) &#123;</span><br><span class="line">  log(<span class="string">&quot;%s\n\t%s&quot;</span>, </span><br><span class="line">    headline.attr(<span class="string">&quot;title&quot;</span>), headline.absUrl(<span class="string">&quot;href&quot;</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>如果有配过秘钥</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">id_rsa （私钥）—— 泄漏容易造成网络安全</span><br><span class="line">id_rsa.pub  （公钥）</span><br></pre></td></tr></table></figure>
-
-<p>建立一个新的SSH KEY</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C xxxxxxxxxx@xx.com</span><br></pre></td></tr></table></figure>
-
-<p>xxxx那里是自己的github邮箱</p>
-<p>默认放在了.ssh文件里</p>
-<p>然后查看.ssh文件下的id_rsa.pub文件的内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将内容进行复制</p>
-<p><strong>第二部分：Github中添加</strong></p>
-<p>登录github，在头像那点击Settings—SSH keys 那里，粘贴刚才的内容</p>
-<p>后续clone的时候选择SSH链接即可。</p>
-<p> SSH key passphrases的问题</p>
-<p>我们可以保护我们的SSH密钥并配置一个身份验证代理，这样我们就不必每次使用SSH密钥时都重新输入密码。(官方原话，不过毕竟麻烦，如果不小心像我一样在前面设置SSH中加了passphrases，通过如下方式取消</p>
-<p>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mce_autumn@bogon ~ % ssh-keygen -p</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> the key is (/Users/mce_autumn/.ssh/id_rsa): </span><br><span class="line">Enter old passphrase: </span><br><span class="line">Key has comment <span class="string">&#x27;xxx@xxx.com&#x27;</span></span><br><span class="line">Enter new passphrase (empty <span class="keyword">for</span> no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved with the new passphrase.</span><br></pre></td></tr></table></figure>
-
+<h3 id="3-Open-Source"><a href="#3-Open-Source" class="headerlink" title="3. Open Source"></a>3. Open Source</h3><p>jsoup是一个开放源码项目，它使用自由的MIT许可证发行。源代码可以在GitHub上找到。</p>
 
       
 
@@ -218,17 +206,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -279,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/04/SSH-%E5%AF%86%E9%92%A5%E8%AF%B4%E6%98%8E/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/11/jsoup%E7%AE%80%E4%BB%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/12/05/JDK%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JDK环境配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/12/04/%E6%96%B0%E5%BB%BAGithub%E4%BB%93%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">新建Github仓库</div>
+    <a href="/2021/12/11/Apache-HttpComponents%E7%AE%80%E4%BB%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Apache HttpComponents简介</div>
       <i class="icon-circle-right"></i>
     </a>
   
